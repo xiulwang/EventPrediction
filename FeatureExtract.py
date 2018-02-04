@@ -79,8 +79,8 @@ def genereate(df,seq_len,time_interval):
     """
     :param df: original time series data of each state
     :param seq_len: length of the historical data
-    :param time_interval: 0 denotes prediction of the next 1st day, 1 denotes the next 2nd day,...,6 -- 7th day
-    :return: X,Y,dates
+    :param time_interval:6 denotes the next 1st day label,2nd label,3rd label,...,7th label
+    :return: X,Y,dates, Y.shape: [T,time_interval+1]
     """
     batch_size = df.shape[0]
     # scaler = MinMaxScaler()

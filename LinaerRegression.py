@@ -97,7 +97,7 @@ def seperate_model():
         # clf.fit(train_X,train_Y)
         predict1 = linreg.predict(test_X)
         J += np.linalg.norm((predict1 - test_Y), ord=1)
-        print(i, np.linalg.norm((predict1 - test_Y), ord=1)/test_Y.shape[0])
+        print("single state error:",i, np.linalg.norm((predict1 - test_Y), ord=1)/test_Y.shape[0])
     print(J / Y_test.shape[0])
 
 
